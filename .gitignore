@@ -1,0 +1,22 @@
+*.log
+node_modules
+
+
+
+# jekyll
+_site/
+.sass-cache
+.jekyll-metadata
+Gemfile
+Gemfile.lock
+
+
+
+# hexo
+.deploy*
+
+
+
+# next.js
+.next/
+_next/
