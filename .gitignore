@@ -1,4 +1,8 @@
+gulpfile.js
 *.log
+
+
+static/src/
 node_modules
 
 
