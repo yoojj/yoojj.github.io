@@ -9,13 +9,12 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no, address=no">
 <meta name="description" content="portfolio">
-<meta name="keywords" content="portfolio, portfolio blog, portfolio site, developer, web, web developer,
-	developer portfolio, developer portfolio site">
+<meta name="keywords" content="portfolio, portfolio blog, portfolio site, developer, web, web developer, developer portfolio, developer portfolio site">
 
 <link rel="shortcut icon" href="./static/img/favicon.ico">
 <link rel="dns-prefetch" href="//cdnjs.com">
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Turret+Road&display=swap">
 <link rel="stylesheet" href="./static/dist/build.css">
 
 <!--[if lt IE 9]>
@@ -23,7 +22,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
 <![endif]-->
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169265415-1"></script>
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-169265415-1"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -91,7 +90,7 @@ if(window.wcs) wcs_do();
 		</dl>
 
 
-		<h3><span class="hide">tech stack list</span></h3>
+		<h3 class="hide">tech stack list</h3>
 		<ul class="teck-list">
 			<li>
 				<a href="https://github.com/yoojj/Java" target="_blank" data-title="새 창">
@@ -140,9 +139,7 @@ if(window.wcs) wcs_do();
 		<dt><span class="hide">이메일 주소</span>
 		<dd>yoojj.xyz@gmail.com
 		<dt><span class="hide">깃허브 주소</span>
-		<dd><a href="https://github.com/yoojj" target="_blank" data-title="새 창">
-				www.github.com/yoojj
-			</a>
+		<dd><a href="https://github.com/yoojj" target="_blank" title="새 창">www.github.com/yoojj</a>
 	</dl>
 	</div>
 </section>
@@ -156,5 +153,29 @@ if(window.wcs) wcs_do();
 
 	<p class="copyright"><em>ㅈ &#169; 2020<em></p>
 </footer>
+
+
+
+<script>
+const nav = document.getElementById('pageLocationNav');
+const about = document.getElementById('about');
+const contact = document.getElementById('contact');
+
+
+window.addEventListener('hashchange', () => {
+
+	const url = location.href.split('#');
+	contentOn('#'+url[url.length-1]);
+
+});
+
+function contentOn(href){
+	Array.prototype.forEach.call(nav.children, li => {
+		li.classList.remove('on');
+		if(li.children[0].getAttribute('href') == href)
+			li.classList.add('on');
+	});
+}
+</script>
 </body>
 </html>
