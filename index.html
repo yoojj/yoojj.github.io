@@ -38,11 +38,11 @@ if(window.wcs) wcs_do();
 </script>
 </head>
 
-
 <body>
 <p class="nav-skip">
 	<a href="#nav">메뉴 바로가기</a>
 </p>
+
 
 
 <div class="common-wrap">
@@ -75,7 +75,9 @@ if(window.wcs) wcs_do();
 			<li><a href="#contact">contact</a>
 		</ul>
 	</nav>
+
 </header>
+
 
 
 <section class="content-common-wrap about-content-wrap" id="about">
@@ -121,12 +123,26 @@ if(window.wcs) wcs_do();
 			<li>&nbsp;
 		</ul>
 	</div>
+
 </section>
 
 
 
 <section class="content-common-wrap portfolio-content-wrap" id="portfolio">
 	<h2 class="content-common-title">Portfolio</h2>
+
+	<section class="portfolio-content">
+		<h3>vue project</h3>
+
+		<img src="https://raw.githubusercontent.com/yoojj/vue-project-trello/master/%40img/content-list.png">
+		<p class="portfolio-link">
+			<a href="https://github.com/yoojj/vue-project-trello" target="_blank" title="새 창">
+				https://github.com/yoojj/vue-project-trello
+			</a>
+		</p>
+
+	</section>
+
 </section>
 
 
@@ -142,8 +158,10 @@ if(window.wcs) wcs_do();
 		<dd><a href="https://github.com/yoojj" target="_blank" title="새 창">www.github.com/yoojj</a>
 	</dl>
 	</div>
+
 </section>
 </div>
+
 
 
 <footer class="footer-wrap">
@@ -160,7 +178,6 @@ if(window.wcs) wcs_do();
 const nav = document.getElementById('pageLocationNav');
 const about = document.getElementById('about');
 const contact = document.getElementById('contact');
-
 
 window.addEventListener('hashchange', () => {
 
