@@ -22,19 +22,21 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
 <![endif]-->
 
-<script async src="//www.googletagmanager.com/gtag/js?id=UA-169265415-1"></script>
+<script async src="//www.googletagmanager.com/gtag/js?id=G-SYLH9PXV0F"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'UA-169265415-1');
+gtag('config', 'G-SYLH9PXV0F');
 </script>
 
 <script async src="//wcs.naver.net/wcslog.js"></script>
 <script>
 if(!wcs_add) var wcs_add = {};
-wcs_add["wa"] = "54381bd98061c";
-if(window.wcs) wcs_do();
+wcs_add['wa'] = '9a3a96d2bd06f0';
+if(window.wcs) {
+wcs_do();
+}
 </script>
 </head>
 
@@ -142,6 +144,12 @@ if(window.wcs) wcs_do();
 		</p>
 
 		<dl class="portfolio-descripte-wrap">
+			<dt>코드</dt>
+			<dd class="temp">
+				<a href="https://github.com/yoojj/vue-project-trello" target="_blank" title="새 창">
+					github
+				</a>
+			</dd>
 			<dt>언어</dt>
 			<dd>javascript</dd>
 			<dt>프레임워크</dt>
@@ -159,13 +167,13 @@ if(window.wcs) wcs_do();
 				</ul>
 			</dd>
 		</dl>
-		</div>
 
 		<p class="portfolio-link">
 			<a href="https://github.com/yoojj/vue-project-trello" target="_blank" title="새 창">
 				www.github.com/yoojj/vue-project-trello
 			</a>
 		</p>
+		</div>
 
 	</section>
 
@@ -200,13 +208,42 @@ if(window.wcs) wcs_do();
 
 
 <script>
-const nav = document.getElementById('pageLocationNav');
-const about = document.getElementById('about');
-const contact = document.getElementById('contact');
+var nav = document.getElementById('pageLocationNav');
+var about = document.getElementById('about');
+var portfolio = document.getElementById('portfolio');
+var contact = document.getElementById('contact');
+
+
+
+/*
+window.addEventListener('wheel', (e) => {
+
+	const scrollTop = window.pageYOffset || window.scrollY;
+	const aboutTop = about.getBoundingClientRect().top;
+	const portfolioTop = portfolio.getBoundingClientRect().top;
+	const contactTop = contact.getBoundingClientRect().top;
+
+	if(aboutTop < scrollTop && about.offsetHeight-100 > scrollTop){
+		onScroll(0, '#about');
+	}
+
+});
+
+function onScroll(i, href){
+	Array.prototype.forEach.call(nav.children, child => {
+		child.classList.remove('on');
+	});
+
+	nav.children[i].classList.add('on');
+	history.pushState(null, null, href);
+}
+*/
+
+
 
 window.addEventListener('hashchange', () => {
 
-	const url = location.href.split('#');
+	var url = location.href.split('#');
 	contentOn('#'+url[url.length-1]);
 
 });
