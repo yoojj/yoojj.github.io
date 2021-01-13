@@ -56,9 +56,9 @@ wcs_do();
 	</span>
 
 	<ul class="page-location" id="pageLocationNav">
-		<li><a href="#about">about</a>
-		<li><a href="#portfolio">portfolio</a>
-		<li><a href="#contact">contact</a>
+		<li class="about"><a href="#about">about</a>
+		<li class="portfolio"><a href="#portfolio">portfolio</a>
+		<li class="contact"><a href="#contact">contact</a>
 	</ul>
 
 	<nav class="header-nav">
@@ -215,44 +215,29 @@ var contact = document.getElementById('contact');
 
 
 
-/*
-window.addEventListener('wheel', (e) => {
-
-	const scrollTop = window.pageYOffset || window.scrollY;
-	const aboutTop = about.getBoundingClientRect().top;
-	const portfolioTop = portfolio.getBoundingClientRect().top;
-	const contactTop = contact.getBoundingClientRect().top;
-
-	if(aboutTop < scrollTop && about.offsetHeight-100 > scrollTop){
-		onScroll(0, '#about');
-	}
-
-});
-
-function onScroll(i, href){
-	Array.prototype.forEach.call(nav.children, child => {
-		child.classList.remove('on');
+var io = new IntersectionObserver( (entries, observer) => {
+	entries.forEach( entry => {
+		if(entry.isIntersecting){
+			onScroll(`${entry.target.id}`);
+		}
 	});
 
-	nav.children[i].classList.add('on');
-	history.pushState(null, null, href);
-}
-*/
+}, {threshold: 0.3});
 
-
-
-window.addEventListener('hashchange', () => {
-
-	var url = location.href.split('#');
-	contentOn('#'+url[url.length-1]);
-
+var elements = [about, portfolio ,contact];
+elements.forEach( el => {
+	io.observe(el);
 });
 
-function contentOn(href){
-	Array.prototype.forEach.call(nav.children, li => {
-		li.classList.remove('on');
-		if(li.children[0].getAttribute('href') == href)
-			li.classList.add('on');
+
+function onScroll(href){
+	Array.prototype.forEach.call(nav.children, child => {
+		if(child.className == href){
+			child.classList.add('on');
+			history.pushState(null, null, `#${href}`);
+		} else {
+			child.classList.remove('on');
+		}
 	});
 }
 </script>
