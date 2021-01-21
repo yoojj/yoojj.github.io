@@ -33,7 +33,7 @@ gtag('config', 'G-SYLH9PXV0F');
 <script async src="//wcs.naver.net/wcslog.js"></script>
 <script>
 if(!wcs_add) var wcs_add = {};
-wcs_add['wa'] = '9a3a96d2bd06f0';
+wcs_add["wa"] = "9a3a96d2bd06f0";
 if(window.wcs) {
 wcs_do();
 }
@@ -44,7 +44,7 @@ wcs_do();
 <p class="nav-skip">
 	<a href="#nav">메뉴 바로가기</a>
 </p>
-
+<hr>
 
 
 <div class="common-wrap">
@@ -79,7 +79,7 @@ wcs_do();
 	</nav>
 
 </header>
-
+<hr>
 
 
 <section class="content-common-wrap about-content-wrap" id="about">
@@ -127,7 +127,7 @@ wcs_do();
 	</div>
 
 </section>
-
+<hr>
 
 
 <section class="content-common-wrap portfolio-content-wrap" id="portfolio">
@@ -178,6 +178,7 @@ wcs_do();
 	</section>
 
 </section>
+<hr>
 
 
 <section class="content-common-wrap contact-content-wrap" id="contact">
@@ -194,7 +195,7 @@ wcs_do();
 
 </section>
 </div>
-
+<hr>
 
 
 <footer class="footer-wrap">
@@ -214,7 +215,6 @@ var portfolio = document.getElementById('portfolio');
 var contact = document.getElementById('contact');
 
 
-
 var io = new IntersectionObserver( (entries, observer) => {
 	entries.forEach( entry => {
 		if(entry.isIntersecting){
@@ -224,13 +224,14 @@ var io = new IntersectionObserver( (entries, observer) => {
 
 }, {threshold: 0.3});
 
+
 var elements = [about, portfolio ,contact];
 elements.forEach( el => {
 	io.observe(el);
 });
 
 
-function onScroll(href){
+var onScroll = (href) => {
 	Array.prototype.forEach.call(nav.children, child => {
 		if(child.className == href){
 			child.classList.add('on');
