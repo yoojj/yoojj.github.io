@@ -1,16 +1,15 @@
-# hexo
+# Hexo
+
 
 ```bash
-# hexo 설치 및 확인
+# hexo 설치
 $ npm install hexo-cli -g
 $ hexo -v
 
 # 프로젝트 생성
-$ hexo init 프로젝트
-$ cd 프로젝트
+$ hexo init example
 
 # 실행
-## http://localhost:4000/
 $ hexo server
 $ hexo s
 
@@ -24,22 +23,7 @@ $ hexo g
 ```
 
 
-
-## 구조
-
-```bash
-프로젝트/
-├── scaffolds/
-├── source/
-├── themes/
-├── _config.yml
-└── package.json
-```
-
-
-
-## 배포
-
+**깃허브 배포**
 ```bash
 # 패키지 설치
 $ npm install hexo-deployer-git
@@ -62,3 +46,7 @@ $ hexo d -g
 
 **토큰 생성**   
 https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
+
+
+
+[top](#)
