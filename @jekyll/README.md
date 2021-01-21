@@ -7,12 +7,10 @@
 $ yum install ruby
 $ gem install jekyll bundler
 
-
-# gemfile 생성
 $ bundle init
-
-# jekyll 추가
 $ bundle add jekyll
+$ bundle install
+
 
 # 정적 사이트 생성
 $ jekyll build
@@ -22,8 +20,43 @@ $ jekyll build --watch
 
 # 실행
 $ jekyll serve
+
+
+## incremental build 오류
+$ jekyll serve --incremental
+$ bundle exec jekyll serve
+
+## mkmf.rb can't find header files for ruby 오류
+$ yum install ruby-devel
 ```
 
+
+**구조**
+```bash
+example/
+├─ data/       # yml, json, cvs 데이터 저장
+├─ includes/   
+├─ layouts/
+├─ posts/
+├─ assets/
+├─ config.yml
+├─ Gemfile
+├─ Gemfile.lock
+└─ index.html
+```
+
+**Gemfile**   
+: gem 정의 문서    
+: bundle을 통해 gem을 설치하고 설치된 gem 정보를 Gemfile.lock에 기록  
+
+ex.
+```yml
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+gem 'jekyll-paginate'
+```
 
 
 [top](#)
