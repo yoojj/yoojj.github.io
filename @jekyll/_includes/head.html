@@ -1,0 +1,25 @@
+<head>
+<meta charset="{{ site.encoding | default: "utf-8" }}">
+<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="{{ site.color }}">
+<meta name="theme-color" content="{{ site.color }}">
+<meta name="description" content="{{ page.title | site.description | escape }}">
+<meta name="keywords" content="{{ page.keyword | site.keyword | escape }}">
+
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<link rel="stylesheet" href="{{ site.asset_url.css }}/base.css">
+<link rel="stylesheet" href="{{ site.asset_url.css }}/common.css">
+
+<link rel="dns-prefetch" href="//cdnjs.com">
+
+<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
+<![endif]-->
+
+</head>

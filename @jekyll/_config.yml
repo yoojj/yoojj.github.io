@@ -1,0 +1,89 @@
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+#plugins_dir :
+#  - jekyll-seo-tag
+#  - jekyll-paginate
+#  - jekyll-sitemap
+#  - jekyll-feed
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+encoding: utf-8
+timezone: Asia/Seoul
+date_format: '%Y-%m-%d'
+
+
+
+# site setting
+lang: 'ko'
+title: 'blog'
+description: 'github blog'
+keyword: 'github, jekyll, blog'
+color: 'black'
+
+url: ''
+baseurl: ''
+asset_url:
+  img: '/assets/img'
+  css: '/assets/css'
+  js: '/assets/js'
+
+name: 'ㅈ'
+email: ''
+
+
+
+# seo setting
+#plugins: [jekyll-seo-tag]
+
+
+
+# navigation setting
+nav:
+  - name: 'post'
+    href: '/'
+
+  - name: 'tag'
+    href: '/tag'
+
+
+
+#collections:
+
+
+#defaults:
+#   - scope:
+#       path: ''
+#       type: ''
+#     values:
+#       layout: default
+#   - scope:
+#       path: ''
+#       type: ''
+#     values:
+#       layout: default
+
+
+
+# pagination setting
+plugins: [jekyll-paginate]
+paginate: 5
+paginate_path: /page:num/
+
+#plugins: [jekyll-paginate-v2]
+#pagination:
+#   enabled: true
+#   per_page: 2
+#   limit: 0
+#   permalink: '/page:num/'
+#   sort_field: 'date'
+#   sort_reverse: true
+
+
+
+# sitemap setting
+#plugins: [jekyll-sitemap]

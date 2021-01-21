@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+<body>
+
+{% include header.html %}
+
+
+<div class="content-wrap">
+{{ content }}
+</div>
+<hr>
+
+
+<footer class="footer-wrap">
+    <em> {{ site.name }} &#169; 2020 </em>
+</footer>
+</body>
+</html>

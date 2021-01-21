@@ -1,0 +1,20 @@
+<header class="header-wrap">
+<h1 class="blog-title">
+    <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+</h1>
+
+    <nav class="header-nav-wrap" id="nav">
+    <h2 class="hide">바로가기</h2>
+    {% if site.nav %}
+    <ul>
+        {% for nav in site.nav %}
+        <li>
+            <a href="{{ nav.href }}">{{ nav.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    </nav>
+
+</header>
+<hr>

@@ -1,0 +1,28 @@
+---
+layout: default
+permalink: /tag
+---
+
+<section>
+<h1 class="hide">블로그 태그 목록</h1>
+
+    <p class="total-post">총 태그 <b>{{ site.tags | size }}</b> 개</p>
+
+    <ul>
+    {% for tag in site.tags %}
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+    {% capture tag_size %}{{ tag | last | size }}{% endcapture %}
+        <li id="{{ tag_name }}">
+            <a href="#">{{ tag_name }}</a>
+            <sub><span class="hide">해당 태그의 포스트 수</span>({{ tag_size }})</sub>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <ul id="tagList">
+    {% for post in site.tags[tag_name] %}
+        <li><a href="{{ post.url }}">{{ post.title | truncate: 50 }}</a></li>
+    {% endfor %}
+    </ul>
+    
+</section>
